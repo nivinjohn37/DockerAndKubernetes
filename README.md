@@ -1,7 +1,3 @@
-# Docker and Kubernetes
-
----
-
 # Docker and Kubernetes Study Reference
 
 Welcome to the Docker and Kubernetes study reference! This document is designed to serve as a comprehensive guide to understanding and working with Docker and Kubernetes, two of the most popular tools in the world of containerization and orchestration.
