@@ -22,11 +22,3 @@ Docker and Kubernetes have become the de facto standards for containerization an
 ## How to Use This Document
 
 This document is divided into several sections, each focusing on a specific aspect of Docker and Kubernetes. Whether you are new to containerization or looking to deepen your knowledge, this document has something for everyone. So, dive in, explore, and learn how Docker and Kubernetes can revolutionize the way you build, ship, and run applications.
-
----
-
-## Docker
-
-[Docker - Basics](https://www.notion.so/Docker-Basics-ceb403288c22488297c50a6670d651eb?pvs=21)
-
-[Virtual Machines (VMs) vs. Docker](https://www.notion.so/Virtual-Machines-VMs-vs-Docker-70e2c8be6d554110bdcdeebb2aa0fc75?pvs=21)
