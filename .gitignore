@@ -1,6 +1,7 @@
 ### Eclipse ###
 .metadata
 bin/
+DockImages/
 tmp/
 *.tmp
 *.bak
