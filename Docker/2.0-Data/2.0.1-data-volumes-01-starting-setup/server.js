@@ -31,15 +31,22 @@ app.post('/create', async (req, res) => {
   const tempFilePath = path.join(__dirname, 'temp', adjTitle + '.txt');
   const finalFilePath = path.join(__dirname, 'feedback', adjTitle + '.txt');
 
-  await fs.writeFile(tempFilePath, content);
-  exists(finalFilePath, async (exists) => {
-    if (exists) {
-      res.redirect('/exists');
-    } else {
-      await fs.rename(tempFilePath, finalFilePath);
-      res.redirect('/');
-    }
-  });
+  try{
+    await fs.writeFile(tempFilePath, content);
+    exists(finalFilePath, async (exists) => {
+      if (exists) {
+        res.redirect('/exists');
+      } else {
+        await fs.copyFile(tempFilePath, finalFilePath);
+        await fs.unlink(tempFilePath);
+        res.redirect('/');
+      }
+    });
+  }catch (error) {
+  console.error('Error handling file:', error);
+  res.status(500).send('Internal Server Error');
+}
+
 });
 
 app.listen(80);
